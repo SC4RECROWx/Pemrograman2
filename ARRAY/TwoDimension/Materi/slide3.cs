@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SandBox
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] grades = new int[4, 5];
+
+            int[,] ages =
+            {
+                {4,1,4,6,6}, {5,4,1,3,1}
+            };
+
+            Console.WriteLine(grades[0, 2]);
+            Console.WriteLine(ages[1, 3]);
+        }
+    }
+}
