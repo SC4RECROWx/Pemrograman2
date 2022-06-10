@@ -11,8 +11,8 @@ int main(){
         cout << "Program Mencari Bilangan Sembarang" << endl;
         cout << "Code By SC4RECROWx(NurAkbar)" << endl;
         cout << "Press Any Key To Start....";
-        getchar();
-        system("cls");
+        cin.get();
+        system("clear");
         
         char lagi;
 
