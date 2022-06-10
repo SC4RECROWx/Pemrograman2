@@ -10,6 +10,7 @@ namespace SandBox
     {
         static void Main(string[] args)
         {
+            //Program Error
             Console.WriteLine("Aritmatic 2 buah array N x N");
             Console.WriteLine("Addition");
             Console.Write("Input Angka Pertama : ");
