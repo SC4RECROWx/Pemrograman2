@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cstdlib>
-#include <stdio.h>
+#include <conio.h>
 #define MAC 14
 using namespace std;
 
@@ -12,11 +11,11 @@ int main(){
         cout << "Code By SC4RECROWx(NurAkbar)" << endl;
         cout << "Press Any Key To Start....";
         cin.get();
-        system("clear");
         
         char lagi;
 
         do{
+            system("cls");
             int random = rand() % 9;
             int cari = random;
             int data[MAC] = {9,6,0,5,0,9,2,3,6,7,6,1,3,2};
