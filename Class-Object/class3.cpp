@@ -49,6 +49,7 @@ namespace SandBox
         public Box(double panjang = 0, double lebar = 0, double tinggi = 0)
         {
             Console.WriteLine("An Object of box being created...");
+            //this adalah 
             this.panjang = panjang;
             this.lebar = lebar;
             this.tinggi = tinggi;
