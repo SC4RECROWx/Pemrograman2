@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SandBox
 {
-    class Program
+    class Tebak_Kata
     {
         static void Main(string[] args)
         {
