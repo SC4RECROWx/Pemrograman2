@@ -22,27 +22,21 @@ namespace SandBox
             char[] word_chr = kamus_kata[word_idx].ToCharArray();
             string[] hidden = new string[word_chr.Length];
             bool GameOver = false;
-            string[] bintang = new string[5];
+            bool ketemu = false;
+            int kesempatan = 7;
 
-            for(int i = 0; i < hidden.Length; i++)
+            for (int i = 0; i < hidden.Length; i++)
             {
                 hidden[i] = "_";
-            }
-            for (int i = 0; i < bintang.Length; i++)
-            {
-                bintang[i] = "*";
             }
 
             //loop
             while (!GameOver)
             {
-                //kesempatan
-                for(int i = 0; i < bintang.Length; i++)
-                {
-                    Console.Write(bintang[i] + " ");
-                }
-                Console.Write($"\nKata dengan {word_chr.Length} HURUF : ");
-                for(int i = 0; i < hidden.Length; i++)
+                Console.WriteLine("\nKesempatan : " + kesempatan);
+                Console.Write($"\nKata dengan {word_chr.Length} huruf : ");
+
+                for (int i = 0; i < hidden.Length; i++)
                 {
                     Console.Write(hidden[i] + " ");
                 }
@@ -50,17 +44,41 @@ namespace SandBox
                 Console.Write("\nInput Huruf dari tebakan anda : ");
                 char huruf = char.Parse(Console.ReadLine());
 
-                for(int i = 0; i < word_chr.Length; i++)
+                ketemu = false;
+                for (int i = 0; i < word_chr.Length; i++)
                 {
                     if (word_chr[i].Equals(huruf))
                     {
                         Console.WriteLine($"Huruf {huruf} ditemukan...");
                         hidden[i] = Convert.ToString(huruf);
                         counter++;
+                        ketemu = true;
                     }
-                    else if (word_chr[i] != huruf)
+                    if (counter == word_chr.Length)
                     {
-                        Console.WriteLine($"Huruf {huruf} Tidak Ditemukan...");
-                        bintang[i] = Convert.ToString("*")
-                        counter++;
+                        Console.WriteLine("won");
+                        GameOver = true;
+                        
                     }
+                }
+
+                if (!ketemu)
+                {
+                    Console.WriteLine("huruf tidak ditemukan");
+                    kesempatan--;
+                    if(kesempatan == 0)
+                    {
+                        Console.WriteLine("Lose...");
+                        GameOver = true;
+                    }
+                }
+            }
+            Console.WriteLine("Jawabannya adalah ");
+            for (int i = 0; i < word_chr.Length; i++)
+            {
+                Console.Write(word_chr[i] + " ");
+            }
+            Console.WriteLine("Game Over...");
+        }
+    }
+}
