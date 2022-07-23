@@ -7,6 +7,7 @@ namespace datacollect
     {
         static void Main(string[] args)
         {
+            //0
             Console.WriteLine("\nLets Play ! TEBKA KATA");
 
             string[] kamus_kata = {"tennis", "raket", "lapangan", "wasit", "atlit",
@@ -38,10 +39,11 @@ namespace datacollect
                 {
                     Console.Write(hidden[i] + " ");
                 }
-
+                //1
                 Console.Write("\nInput Huruf dari tebakan anda : ");
                 char huruf = char.Parse(Console.ReadLine());
 
+                //2
                 if (daftar_tebakan.Contains(huruf))
                 {
                     Console.WriteLine("Huruf : " + huruf + "Telah di input..coba lagi");
