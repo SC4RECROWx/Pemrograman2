@@ -146,13 +146,26 @@ int main(){
             
     }
 
-    //Akhir
-    cout << endl << endl;
-    cout << "  =====Total Keseluruhan Belanjaan =====" << endl;
-    cout << "\tTotal Harga Pesanan : " << total << endl;
-    cout << "\tBayar               : ";
-    cin >> bayar;
+    bool pas = false;
+    do{
+        cout << endl << endl;
+        cout << "  =====Total Keseluruhan Belanjaan =====" << endl;
+        cout << "\tTotal Harga Pesanan : " << total << endl;
+        cout << "\tBayar               : ";
+        cin >> bayar;
+        if(bayar < total){
+            cout << "\tMaaf Uang Anda Kurang Silahkan cukupi harga total..." << endl;
+        }
+        else if(bayar >= total){
+            pas = true;
+        }
+    }while(!pas);
+
     kembalian = bayar - total;
-    cout << "\tKembalian           : " << kembalian << endl;
-    cout << "\tTerima Kasih..." << endl;
+
+    if(bayar > total){
+        cout << "\tKembalian           : " << kembalian << endl;
+    }
+
+    cout << "\tTerima Kasih...";
 }
