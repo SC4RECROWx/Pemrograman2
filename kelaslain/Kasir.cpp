@@ -147,11 +147,12 @@ int main(){
     }
 
     //Akhir
-
-    cout << "Total Harga Pesanan : " << total << endl;
-    cout << "Bayar               : ";
+    cout << endl << endl;
+    cout << "  =====Total Keseluruhan Belanjaan =====" << endl;
+    cout << "\tTotal Harga Pesanan : " << total << endl;
+    cout << "\tBayar               : ";
     cin >> bayar;
     kembalian = bayar - total;
-    cout << "Kembalian           : " << kembalian << endl;
-    cout << "Terima Kasih..." << endl;
+    cout << "\tKembalian           : " << kembalian << endl;
+    cout << "\tTerima Kasih..." << endl;
 }
