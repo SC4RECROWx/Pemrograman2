@@ -6,6 +6,7 @@ namespace SandBox
     {
         static void Main(string[] args)
         {
+            //deklarasi variabel
             int jml_ayam = 0;
             int jml_nasi = 0;
             int jml_mie = 0;
