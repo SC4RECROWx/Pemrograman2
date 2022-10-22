@@ -7,6 +7,12 @@ namespace latihan1
     {
         public static void Main(string[] args)
         {
+            /*YANG MAU COPY SILAHKAN INI MASIH SALAH DI LGIKA NESTED FOR 
+            SIAPA TAU YANG LIAT SUDAH NGESOLVE 
+            PROBLEMNYA MOHON DI BERI TAHU BENARKAN LOGIKANYA
+            JANGAN CUMA NYONTEK LOGIKA BENERIN SENDIRI TERUS DIAM 
+            SENDIRI MINIMAL TAU DIRI DIKIT LAH DEKK*/
+            
             Console.Write("Masukkan Jumlah Data : ");
             int jml_data = Convert.ToInt32(Console.ReadLine());
             string[] nama = new string[jml_data];
