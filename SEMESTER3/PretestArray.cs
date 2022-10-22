@@ -7,16 +7,10 @@ namespace latihan1
     {
         public static void Main(string[] args)
         {
-            /*YANG MAU COPY SILAHKAN INI MASIH SALAH DI LGIKA NESTED FOR 
-            SIAPA TAU YANG LIAT SUDAH NGESOLVE 
-            PROBLEMNYA MOHON DI BERI TAHU BENARKAN LOGIKANYA
-            JANGAN CUMA NYONTEK LOGIKA BENERIN SENDIRI TERUS DIAM 
-            SENDIRI MINIMAL TAU DIRI DIKIT LAH DEKK*/
-            
             Console.Write("Masukkan Jumlah Data : ");
             int jml_data = Convert.ToInt32(Console.ReadLine());
             string[] nama = new string[jml_data];
-            int[] total = new int[jml_data];
+            float[] total = new float[jml_data];
 
             for(int i = 0; i < jml_data; i++)
             {
@@ -28,16 +22,19 @@ namespace latihan1
                 //input nilai
                 Console.Write("Masukkan Jumlah Nilai : ");
                 int jml_nilai = Convert.ToInt32(Console.ReadLine());
-                int[] nilai = new int[jml_nilai];
+                float[] nilai = new float[jml_nilai];
                 for(int j = 0; j < jml_nilai; j++)
                 {
                     Console.Write($"Nilai Ke-{(j+1)} : ");
-                    nilai[j] = Convert.ToInt32(Console.ReadLine());
-                    jumlah = jumlah + nilai[j];
+                    jumlah = Convert.ToInt32(Console.ReadLine());
+                    nilai[j] = jumlah + nilai[j];
                 }
-                total[i] = jumlah / 2;
+                total[i] = ((nilai.Sum()) / jml_nilai) ;
             }
-
+            
+            Console.WriteLine();
+            Console.WriteLine();
+            
             for(int i = 0; i < jml_data; i++)
             {
                 Console.WriteLine($"-- Data Ke-{(i+1)} --");
