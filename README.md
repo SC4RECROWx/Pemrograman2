@@ -1,8 +1,3 @@
 # Pemrograman2
-Tugas Pemrograman 2  dan Struktur Data
-
-Selain Contributors tolong jangan perlihatkan
-Kepada yang lain karena aku cuma mau membantu kalian
-Bukan orang lain itulah mengapa repositori ini
-Bersifat private
+<p>YANG BUKAN ANAK KELAS TI/SI308 DILARANG KERAS MELIHAT SAYA TIDAK IKHLAS
 <img src="https://www.pngkey.com/png/detail/766-7660609_dilarang-parkir-png-prohibition-signs-no-drinking-water.png">
