@@ -5,17 +5,17 @@ using MySql.Data.MySqlClient;
 
 namespace sandbox3
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
 
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // KONEKSI DATABASE MYSQL
+            // KONEKSI DATABASE MYSQL DAN MENGAMBIL DATABASE YANG DIPERLUKAN
             MySqlConnection Connect = new MySqlConnection("SERVER = localhost; database = pt_sinar; UID = root; pwd = ''");
             string Query = "select*from user where USERNAME = '" + UserName.Text.Trim() + "' and PASSWORD = '" + PassWord.Text.Trim() + "'";
             MySqlDataAdapter DataAdp = new MySqlDataAdapter(Query, Connect);
@@ -25,7 +25,9 @@ namespace sandbox3
             DataAdp.Fill(data);
             if(data.Rows.Count == 1)
             {
-                main objMain_Program = new main();
+                // JIKA SYARAT TERPENUHI MAKA FORM INI AKAN DITUTUP
+                // DAN AKAN MASUK KE MAIN PROGRAM
+                Main objMain_Program = new Main();
                 this.Hide();
                 objMain_Program.Show();
             }
