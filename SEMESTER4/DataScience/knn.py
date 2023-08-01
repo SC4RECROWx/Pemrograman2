@@ -24,7 +24,7 @@ plt.show()
 x = bunga.iloc[:, : -4].values
 y = bunga.iloc[:, 4].values
 
-X_train, X_test, y_train, y_test = model_selection.train_test_split(X, y, test_size = 0.2)
+X_train, X_test, y_train, y_test = model_selection.train_test_split(x, y, test_size = 0.2)
 
 knn = KNeighborsClassifier (n_neighbors = 5)
 
