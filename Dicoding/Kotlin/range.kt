@@ -40,8 +40,3 @@ fun main(){
     /*
        output: No value 11 in Range
     */
-
-/*
-jadi perulangan for loop pada kotlin pertama kita harus memasukkan semua data kedalam variabel lalu kita
-loop meggunakan forEach
-*/
